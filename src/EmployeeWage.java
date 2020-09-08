@@ -3,7 +3,7 @@ public class EmployeeWage {
     private final double empIsPresent = Math.floor(Math.random() * 10) % 2;
     private final double empIsFullTimeOrPartTime = Math.floor(Math.random() * 10 + 1) % 3;
     private final int wagePerHr = 20;
-    private final int noOfHrsPerDay = 8;
+    private int noOfHrsPerDay = 8;
     private final int empIsFullTime = 1;
     private final int empIsPartTime = 2;
     private final int empPartTimeHrs = 8;
@@ -34,6 +34,10 @@ public class EmployeeWage {
 
     public double getEmpIsFullTimeOrPartTime() {
         return empIsFullTimeOrPartTime;
+    }
+
+    public void setNoOfHrsPerDay(int noOfHours) {
+        this.noOfHrsPerDay = noOfHours;
     }
 
     public int getDailyWage() {

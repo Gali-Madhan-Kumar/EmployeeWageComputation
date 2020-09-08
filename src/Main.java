@@ -10,10 +10,17 @@ public class Main {
             System.out.println("Employee is Absent");
         }
         System.out.println("Employee Wage Per Day is : " + empWagePerDay);
-        if (empIsFullTimeOrPartTime == 1) {
-            System.out.println("Employee is Full Time");
-        } else {
-            System.out.println("Employee is Part Time");
+        switch (empIsFullTimeOrPartTime) {
+            case 1:
+                employeeWage.setNoOfHrsPerDay(10);
+                System.out.println("Employee is Full Time and His Working hours Per Day is " +employeeWage.getNoOfHrsPerDay());
+                break;
+            case 2:
+                employeeWage.setNoOfHrsPerDay(8);
+                System.out.println("Employee is Part Time and His Working hours Per Day is " +employeeWage.getNoOfHrsPerDay());
+                break;
+            default:
+                employeeWage.setNoOfHrsPerDay(0);
         }
     }
 }
