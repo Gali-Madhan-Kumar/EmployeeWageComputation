@@ -14,19 +14,19 @@ public class Main {
         }
         switch (empIsFullTimeOrPartTime) {
             case 1:
-                employeeWage.setNoOfHrsPerDay(10);
+                employeeWage.setNoOfHrsPerDay(8);
                 empWagePerDay = employeeWage.getDailyWage();
                 empWagePerMonth = employeeWage.getTotalWorkingDaysPerMonth() * employeeWage.getDailyWage();
                 System.out.println("Employee is Full Time and His Working hours Per Day is " +employeeWage.getNoOfHrsPerDay());
                 break;
             case 2:
-                employeeWage.setNoOfHrsPerDay(8);
+                employeeWage.setNoOfHrsPerDay(4);
                 empWagePerDay = employeeWage.getDailyWage();
                 empWagePerMonth = employeeWage.getTotalWorkingDaysPerMonth() * employeeWage.getDailyWage();
                 System.out.println("Employee is Part Time and His Working hours Per Day is " +employeeWage.getNoOfHrsPerDay());
                 break;
             default:
-                employeeWage.setNoOfHrsPerDay(8);
+                employeeWage.setNoOfHrsPerDay(0);
         }
         System.out.println("Employee Wage Per Day is : " + empWagePerDay);
         System.out.println("Employee total wage per month = " + empWagePerMonth);
