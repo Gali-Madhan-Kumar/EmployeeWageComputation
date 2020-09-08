@@ -6,7 +6,7 @@ public class EmployeeWage {
     private int noOfHrsPerDay = 8;
     private final int empIsFullTime = 1;
     private final int empIsPartTime = 2;
-    private final int empPartTimeHrs = 8;
+    private final int totalWorkingDaysPerMonth = 20;
 
     public double getEmpIsPresent() {
         return empIsPresent;
@@ -28,8 +28,8 @@ public class EmployeeWage {
         return empIsPartTime;
     }
 
-    public int getEmpPartTimeHrs() {
-        return empPartTimeHrs;
+    public int getTotalWorkingDaysPerMonth() {
+        return totalWorkingDaysPerMonth;
     }
 
     public double getEmpIsFullTimeOrPartTime() {
