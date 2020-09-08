@@ -1,6 +1,8 @@
 public class Main {
+
+    private static final EmployeeWage employeeWage = new EmployeeWage();
+
     public static void main(String[] args) {
-        EmployeeWage employeeWage = new EmployeeWage();
         int empIsPresent = (int) employeeWage.getEmpIsPresent();
         int empIsFullTimeOrPartTime = (int) employeeWage.getEmpIsFullTimeOrPartTime();
         int empWagePerDay = employeeWage.getDailyWage();
@@ -26,5 +28,21 @@ public class Main {
                 employeeWage.setNoOfHrsPerDay(0);
         }
         System.out.println("Employee total wage per month = " + empWagePerMonth);
+        int totalWage = calculateWages();
+        System.out.println("Employee total wage for 20 days or for 100 hrs is = " +totalWage);
+    }
+
+    private static int calculateWages() {
+        int totalHours = 1;
+        int totalDays = 1;
+        int totalWage = 0;
+        while (totalHours <= 100 && totalDays <= 20) {
+            totalWage = totalHours * employeeWage.getWagePerHr();
+            totalHours += 1;
+            if (totalHours == 24) {
+                totalDays += 1;
+            }
+        }
+        return totalWage;
     }
 }
