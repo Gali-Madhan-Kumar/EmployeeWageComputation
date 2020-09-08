@@ -41,6 +41,6 @@ public class EmployeeWage {
     }
 
     public int getDailyWage() {
-        return getWagePerHr() * getNoOfHrsPerDay();
+        return this.getWagePerHr() * this.getNoOfHrsPerDay();
     }
 }
