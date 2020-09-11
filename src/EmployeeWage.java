@@ -1,12 +1,18 @@
 public class EmployeeWage {
 
-    private final double empIsPresent = Math.floor(Math.random() * 10) % 2;
-    private final double empIsFullTimeOrPartTime = Math.floor(Math.random() * 10 + 1) % 3;
-    private final int wagePerHr = 20;
-    private int noOfHrsPerDay = 8;
-    private final int empIsFullTime = 1;
-    private final int empIsPartTime = 2;
-    private final int totalWorkingDaysPerMonth = 20;
+    private final double empIsPresent = Math.floor(Math.random() * 10) % 3;
+    private int wagePerHr;
+    private int totalWorkingDaysPerMonth;
+    private int noOfHrsPerDay;
+
+    EmployeeWage() {
+
+    }
+
+    EmployeeWage(int wagePerHr, int totalWorkingDaysPerMonth) {
+        this.wagePerHr = wagePerHr;
+        this.totalWorkingDaysPerMonth = totalWorkingDaysPerMonth;
+    }
 
     public double getEmpIsPresent() {
         return empIsPresent;
@@ -20,20 +26,8 @@ public class EmployeeWage {
         return noOfHrsPerDay;
     }
 
-    public int getEmpIsFullTime() {
-        return empIsFullTime;
-    }
-
-    public int getEmpIsPartTime() {
-        return empIsPartTime;
-    }
-
     public int getTotalWorkingDaysPerMonth() {
         return totalWorkingDaysPerMonth;
-    }
-
-    public double getEmpIsFullTimeOrPartTime() {
-        return empIsFullTimeOrPartTime;
     }
 
     public void setNoOfHrsPerDay(int noOfHours) {
