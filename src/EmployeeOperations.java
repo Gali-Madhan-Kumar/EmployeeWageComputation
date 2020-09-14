@@ -52,9 +52,19 @@ public class EmployeeOperations implements EmployeeDetails {
         return totalWage;
     }
 
-    public void addCompanyEmpWage(int wagePerHr, int totalWorkingDaysPerMonth, String company) {
-        companiesEmpWage[noOfCompanies] = new EmployeeWage(wagePerHr, totalWorkingDaysPerMonth, company);
+    public void addCompanyEmpWage(String company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth) {
+        companiesEmpWage[noOfCompanies] = new EmployeeWage(company, empRatePerHr, numOfWorkingDays, maxHrsPerMonth);
         noOfCompanies++;
+    }
+
+    @Override
+    public void computeEmpWage() {
+
+    }
+
+    @Override
+    public int getTotalWage(String company) {
+        return 0;
     }
 
     public void computeWage() {

@@ -1,8 +1,6 @@
 public interface EmployeeDetails {
 
-    void empIsPresent(EmployeeWage employeeWage);
-
-    void fullTimeOrPartTime(int fullTimeOrPartTime, EmployeeWage employeeWage);
-
-    int calculateWage(EmployeeWage employeeWage);
+    public void addCompanyEmpWage(String company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth);
+    public void computeEmpWage();
+    public int getTotalWage(String company);
 }

@@ -1,59 +1,40 @@
 public class EmployeeWage {
 
-    private final double empIsPresent = Math.floor(Math.random() * 10) % 3;
-    private int wagePerHr;
-    private int totalWorkingDaysPerMonth;
-    private int noOfHrsPerDay;
-    private String company;
-    private int totalWage;
+    public final String company;
+    public final int empRatePerHr;
+    public final int noOfWorkingDays;
+    public final int maxHoursPerMonth;
+    public int totalEmpWage;
 
-    EmployeeWage() {
-
-    }
-
-    EmployeeWage(int wagePerHr, int totalWorkingDaysPerMonth, String company) {
-        this.wagePerHr = wagePerHr;
-        this.totalWorkingDaysPerMonth = totalWorkingDaysPerMonth;
+    EmployeeWage(String company, int empRatePerHr, int noOfWorkingDays, int maxHoursPerMonth) {
         this.company = company;
-    }
-
-    public double getEmpIsPresent() {
-        return empIsPresent;
-    }
-
-    public int getWagePerHr() {
-        return wagePerHr;
-    }
-
-    public int getNoOfHrsPerDay() {
-        return noOfHrsPerDay;
-    }
-
-    public int getTotalWorkingDaysPerMonth() {
-        return totalWorkingDaysPerMonth;
-    }
-
-    public void setNoOfHrsPerDay(int noOfHours) {
-        this.noOfHrsPerDay = noOfHours;
-    }
-
-    public int getDailyWage() {
-        return this.getWagePerHr() * this.getNoOfHrsPerDay();
+        this.empRatePerHr = empRatePerHr;
+        this.noOfWorkingDays = noOfWorkingDays;
+        this.maxHoursPerMonth = maxHoursPerMonth;
+        totalEmpWage = 0;
     }
 
     public String getCompany() {
         return company;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public int getEmpRatePerHr() {
+        return empRatePerHr;
     }
 
-    public int getTotalWage() {
-        return totalWage;
+    public int getNoOfWorkingDays() {
+        return noOfWorkingDays;
     }
 
-    public void setTotalWage(int totalWage) {
-        this.totalWage = totalWage;
+    public int getMaxHoursPerMonth() {
+        return maxHoursPerMonth;
+    }
+
+    public int getTotalEmpWage() {
+        return totalEmpWage;
+    }
+
+    public void setTotalEmpWage(int totalEmpWage) {
+        this.totalEmpWage = totalEmpWage;
     }
 }
