@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        EmployeeWage employeeWageForCompanyOne = new EmployeeWage(20, 20);
-        EmployeeWage employeeWageForCompanyTwo = new EmployeeWage(25, 22);
+        EmployeeWage employeeWageForCompanyOne = new EmployeeWage(20, 20, "Reliance");
+        EmployeeWage employeeWageForCompanyTwo = new EmployeeWage(25, 22, "DMart");
         EmployeeOperations employeeOperations = new EmployeeOperations();
 
         employeeOperations.empIsPresent(employeeWageForCompanyOne);

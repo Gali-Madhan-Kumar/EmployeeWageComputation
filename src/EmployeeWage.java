@@ -4,14 +4,17 @@ public class EmployeeWage {
     private int wagePerHr;
     private int totalWorkingDaysPerMonth;
     private int noOfHrsPerDay;
+    private String company;
+    private int totalWage;
 
     EmployeeWage() {
 
     }
 
-    EmployeeWage(int wagePerHr, int totalWorkingDaysPerMonth) {
+    EmployeeWage(int wagePerHr, int totalWorkingDaysPerMonth, String company) {
         this.wagePerHr = wagePerHr;
         this.totalWorkingDaysPerMonth = totalWorkingDaysPerMonth;
+        this.company = company;
     }
 
     public double getEmpIsPresent() {
@@ -36,5 +39,21 @@ public class EmployeeWage {
 
     public int getDailyWage() {
         return this.getWagePerHr() * this.getNoOfHrsPerDay();
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public int getTotalWage() {
+        return totalWage;
+    }
+
+    public void setTotalWage(int totalWage) {
+        this.totalWage = totalWage;
     }
 }
