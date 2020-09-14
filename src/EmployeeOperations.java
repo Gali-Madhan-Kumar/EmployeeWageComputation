@@ -1,7 +1,7 @@
 public class EmployeeOperations implements EmployeeDetails {
 
-    private final EmployeeWage[] companiesEmpWage = new EmployeeWage[5];
-    private int noOfCompanies = 0;
+    public static final int IS_PART_TIME = 1;
+    public static final int IS_FULL_TIME = 2;
 
     public void empIsPresent(EmployeeWage employeeWage) {
         int empIsPresent = (int) employeeWage.getEmpIsPresent();
@@ -52,11 +52,6 @@ public class EmployeeOperations implements EmployeeDetails {
         return totalWage;
     }
 
-    public void addCompanyEmpWage(String company, int empRatePerHr, int numOfWorkingDays, int maxHrsPerMonth) {
-        companiesEmpWage[noOfCompanies] = new EmployeeWage(company, empRatePerHr, numOfWorkingDays, maxHrsPerMonth);
-        noOfCompanies++;
-    }
-
     @Override
     public void computeEmpWage() {
 
@@ -65,12 +60,5 @@ public class EmployeeOperations implements EmployeeDetails {
     @Override
     public int getTotalWage(String company) {
         return 0;
-    }
-
-    public void computeWage() {
-        for (int i = 0; i < noOfCompanies; i++) {
-            companiesEmpWage[i].setTotalWage(calculateWage(companiesEmpWage[i]));
-            System.out.println(companiesEmpWage[i].getTotalWage());
-        }
     }
 }

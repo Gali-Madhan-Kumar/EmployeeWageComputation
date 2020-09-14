@@ -37,4 +37,15 @@ public class EmployeeWage {
     public void setTotalEmpWage(int totalEmpWage) {
         this.totalEmpWage = totalEmpWage;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeWage{" +
+                "company='" + company + '\'' +
+                ", empRatePerHr=" + empRatePerHr +
+                ", noOfWorkingDays=" + noOfWorkingDays +
+                ", maxHoursPerMonth=" + maxHoursPerMonth +
+                ", totalEmpWage=" + totalEmpWage +
+                '}';
+    }
 }
