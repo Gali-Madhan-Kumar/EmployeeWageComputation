@@ -1,5 +1,8 @@
 public class EmployeeOperations implements EmployeeDetails {
 
+    private final EmployeeWage[] companiesEmpWage = new EmployeeWage[5];
+    private int noOfCompanies = 0;
+
     public void empIsPresent(EmployeeWage employeeWage) {
         int empIsPresent = (int) employeeWage.getEmpIsPresent();
         if (empIsPresent == 0) {
@@ -47,5 +50,17 @@ public class EmployeeOperations implements EmployeeDetails {
             }
         }
         return totalWage;
+    }
+
+    public void addCompanyEmpWage(int wagePerHr, int totalWorkingDaysPerMonth, String company) {
+        companiesEmpWage[noOfCompanies] = new EmployeeWage(wagePerHr, totalWorkingDaysPerMonth, company);
+        noOfCompanies++;
+    }
+
+    public void computeWage() {
+        for (int i = 0; i < noOfCompanies; i++) {
+            companiesEmpWage[i].setTotalWage(calculateWage(companiesEmpWage[i]));
+            System.out.println(companiesEmpWage[i].getTotalWage());
+        }
     }
 }
